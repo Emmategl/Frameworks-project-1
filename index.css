@@ -1,0 +1,123 @@
+#logo {
+    width: 15%; /* Set a small width */
+    height: 15%;
+ }
+
+p{
+    font-size: 20px;
+}
+
+h2{
+  text-align: center;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.popular{
+  background-color: #f0f0f0;
+}
+
+
+#login{
+    font-size: 20px;
+    float: right;
+    color: black;
+    }
+
+#login:hover{
+  color: #606354;
+  text-decoration: none;
+}
+
+/* #icon{
+  height: 8%;
+  width: 8%;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  float: right;
+} */
+.navbar-expand-lg{
+  margin-top: 5px;
+}
+
+/* space between justicy content*/
+
+.column1 {
+  flex: 5%;
+  text-align: center;
+  position: relative;
+  padding-bottom: 5%;
+}
+.column2 {
+  flex: 45%;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 5%;
+}
+
+.column3 {
+  flex: 45%;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 5%;
+}
+
+.column4 {
+  flex: 5%;
+  text-align: center;
+  position: relative;
+  padding-bottom: 5%;
+
+}
+
+  #frontPictures:hover {
+  box-shadow: 0 0 10px #000;
+  }
+  
+  img{
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:inherit;
+    justify-content: space-between;
+  }
+
+  .col1 {
+    flex: 1;
+    padding-bottom: 5%;
+
+  }
+  .col2 {
+    flex: 1;
+    padding-bottom: 5%;
+  }
+  .col3 {
+    flex: 1;
+    padding-bottom: 5%;
+  }
+  .col4 {
+    flex: 1;
+    padding-bottom: 5%;
+  }
+  
+ /*  .newprod{
+    border: 20px;
+    
+} */
+
+  .footer {
+    flex: 1;
+    height: 200px;
+    background-color: #d3d8c1;
+    color: white;
+    text-align: center;
+  }
