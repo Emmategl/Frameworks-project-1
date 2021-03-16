@@ -68,17 +68,16 @@ function addToCart(product){
 
 
     existingCart = existingCart ? JSON.parse(existingCart) : [];
+    console.log(existingCart)
     for (let j = 0; j < existingCart.length; j++) {
         if(product.id == existingCart[j].id){
         alert("You already added that to the basket!");
-        console.log("hello")
         localStorage.setItem('cart', JSON.stringify(existingCart));
         return
     }}
 
     for (let j = 0; j < existingCart.length; j++) {
         if(product.id != existingCart[j].id){
-            console.log("no")
             existingCart.push(product)
             localStorage.setItem('cart', JSON.stringify(existingCart));
             return
@@ -99,24 +98,6 @@ function addToCart(product){
       
 }
 
-//remove elements from the cart
-let cartRemoved = []
-function remove(product, e){
-    var existingCart = localStorage.getItem('cart');
-    //If cart exists convert to array
-    // If cart does not exists, create an array
-    existingCart = existingCart ? JSON.parse(existingCart) : [];
-    
-   for (let j = 0; j < existingCart.length; j++) {
-       if(existingCart[j].id === product.id){
-           existingCart.splice(j)
-       }
-   }
-   localStorage.setItem('cart', JSON.stringify(existingCart))
-   e.target.parentElement.parentElement.parentElement.remove();
-   calculatePrice()
-   console.log(existingCart)
-}
 
 /* //remove elements from the cart
 let cartRemoved = []
@@ -194,6 +175,28 @@ function loadCart() {
 
     //Update the price
     $('#cart-subtotal').html('<p>Total price:' + sum + '<p>');
+}
+
+//remove elements from the cart
+let removed = []
+function remove(product, e){
+    var existingCart = localStorage.getItem('cart');
+    //If cart exists convert to array
+    // If cart does not exists, create an array
+    existingCart = existingCart ? JSON.parse(existingCart) : [];
+    console.log(existingCart)
+    
+   for (var i = existingCart.length - 1; i >= 0; i--) {
+    if (existingCart[i].id == product.id) { 
+        existingCart.splice(i, 1);
+    }
+}
+
+   localStorage.setItem('cart', JSON.stringify(existingCart))
+   e.target.parentElement.parentElement.parentElement.remove();
+   calculatePrice()
+   console.log(existingCart)
+   console.log(removed)
 }
 
 
