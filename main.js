@@ -65,9 +65,32 @@ function addToCart(product){
     var existingCart = localStorage.getItem('cart');
     //If cart exists convert to array
     // If cart does not exists, create an array
+
+
     existingCart = existingCart ? JSON.parse(existingCart) : [];
+    for (let j = 0; j < existingCart.length; j++) {
+        if(product.id == existingCart[j].id){
+        alert("You already added that to the basket!");
+        console.log("hello")
+        localStorage.setItem('cart', JSON.stringify(existingCart));
+        return
+    }}
+
+    for (let j = 0; j < existingCart.length; j++) {
+        if(product.id != existingCart[j].id){
+            console.log("no")
+            existingCart.push(product)
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+            return
+        }
+        }
+    for (let j = 0; j == existingCart.length;){
+        existingCart.push(product)
+        localStorage.setItem('cart', JSON.stringify(existingCart));
+        return
+    }
     // Add the product to the existing cart
-    existingCart.push(product)
+    
     // Save the updated cart to localStorage
     localStorage.setItem('cart', JSON.stringify(existingCart));
     console.log(existingCart)
@@ -77,6 +100,25 @@ function addToCart(product){
 }
 
 //remove elements from the cart
+let cartRemoved = []
+function remove(product, e){
+    var existingCart = localStorage.getItem('cart');
+    //If cart exists convert to array
+    // If cart does not exists, create an array
+    existingCart = existingCart ? JSON.parse(existingCart) : [];
+    
+   for (let j = 0; j < existingCart.length; j++) {
+       if(existingCart[j].id === product.id){
+           existingCart.splice(j)
+       }
+   }
+   localStorage.setItem('cart', JSON.stringify(existingCart))
+   e.target.parentElement.parentElement.parentElement.remove();
+   calculatePrice()
+   console.log(existingCart)
+}
+
+/* //remove elements from the cart
 let cartRemoved = []
 function remove(i, e){
     var existingCart = localStorage.getItem('cart');
@@ -93,7 +135,7 @@ function remove(i, e){
    localStorage.setItem('cart', JSON.stringify(cartRemoved))
    e.target.parentElement.parentElement.parentElement.remove();
    calculatePrice()
-}
+} */
 
 //Load the cart page
 function loadCart() {
