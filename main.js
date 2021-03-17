@@ -8,7 +8,7 @@ function loadProducts(product) {
         item.innerHTML = 
         `<div class="allItems">
         <div class="product-image">
-            <a href="Coffee1.html">
+            <a class="links" href="Coffee1.html">
             <img src="${product.img_path}">
                 </a>
             </div>
@@ -75,31 +75,8 @@ function addToCart(product){
     
     // Save the updated cart to localStorage
     localStorage.setItem('cart', JSON.stringify(existingCart));
-    console.log(existingCart)
-   
-        console.log(product.name)
       
 }
-
-
-/* //remove elements from the cart
-let cartRemoved = []
-function remove(i, e){
-    var existingCart = localStorage.getItem('cart');
-    //If cart exists convert to array
-    // If cart does not exists, create an array
-    existingCart = existingCart ? JSON.parse(existingCart) : [];
-    
-   for (let j = 0; j < existingCart.length; j++) {
-       if(existingCart[j] === i){
-           existingCart.splice(j)
-           cartRemoved.push(existingCart)
-       }
-   }
-   localStorage.setItem('cart', JSON.stringify(cartRemoved))
-   e.target.parentElement.parentElement.parentElement.remove();
-   calculatePrice()
-} */
 
 //Load the cart page
 function loadCart() {
@@ -174,12 +151,38 @@ function remove(product, e){
         existingCart.splice(i, 1);
     }
 }
-
    localStorage.setItem('cart', JSON.stringify(existingCart))
    e.target.parentElement.parentElement.parentElement.remove();
    calculatePrice()
-   console.log(existingCart)
-   console.log(removed)
+}
+
+    function loadDescription(){
+        var itemDess = localStorage.getItem('des');
+        itemDesss = JSON.parse(itemDess)
+        console.log(itemDess)
+
+        itemDesss.map((i)=> {
+        let item = document.createElement('div');
+        item.innerHTML =
+        `
+        <h2>Description of specific coffee</h2>
+        <div class="product">
+        <div id="items"></div>
+        <div class="product-img">
+          <img id = "image" src="${i.img_path}">
+        </div>
+        <div class="product-des">
+          <h5 id="name">${i.name}</h5>
+          <h6 id="price">Price: ${i.price} DKK</h6>
+          <p id="des">${i.description}</p>
+          <button class="add">Add to cart</button>
+      </div>`
+      const items = document.getElementById('items');
+      item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
+        addToCart(i)
+    });
+      items.append(item)        
+    });
 }
 
 
@@ -380,117 +383,3 @@ let products = [
  type: "tea",
 },
 ]
-
-
-var i = 
-    {
-        id: 18,
-        name: "Tea7",
-        price: 125,
-        img_path: "Images/new2.png",
-        description: "coffee 3 description",
-        quantity: 1,
-        type: "tea",
-       }
-
-    function loadDescription(){
-        var itemDess = localStorage.getItem('des');
-        itemDesss = JSON.parse(itemDess)
-        console.log(itemDess)
-
-        itemDesss.map((i)=> {
-        let item = document.createElement('div');
-        item.innerHTML =
-        ` 
-        <div class="product-img">
-          <img id = "image" src="${i.img_path}">
-        </div>
-        <div class="product-des">
-          <h5 id="name">${i.name}</h5>
-          <h6 id="price">Price: ${i.price} DKK</h6>
-          <p id="des">${i.description}</p>
-          <button class="add">Add to cart</button>
-      </div>`
-      const items = document.getElementById('items');
-      item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
-        addToCart(i)
-    });
-      items.append(item)
-      console.log(i)
-      console.log("im in load description")
-      console.log(itemDesss)
-        
-    });
-}
-
-/* function loadDescription(){
-    var itemDess = localStorage.getItem('des');
-    itemDesss = JSON.parse(itemDess)
-    console.log(itemDess)
-
-    itemDesss.map((i)=> {
-    let item = document.createElement('div');
-    item.innerHTML =
-    ` 
-    <div class="product-img">
-      <img id = "image" src="${i.img_path}">
-    </div>
-    <div class="product-des">
-      <h5 id="name">${i.name}</h5>
-      <h6 id="price">Price: ${i.price} DKK</h6>
-      <p id="des">${i.description}</p>
-      <button class="add">Add to cart</button>
-  </div>`
-  const items = document.getElementById('items');
-  item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
-    addToCart(i)
-});
-  items.append(item)
-  console.log(i)
-  console.log("im in load description")
-  console.log(itemDesss)
-    
-});
-}
- */
-
-/* function test(product){
-    console.log("hello")
-var html = "<table border='1|1'>";
-for (var i = 0; i < products.length; i++) {
-    html+="<tr>";
-    html+="<td>"+product[i].name+"</td>";
-    html+="<td>"+product[i].price+"</td>";
-    html+="<td>"+product[i].description+"</td>";
-    html+="<td>"+product[i].img_path+"</td>";
-    html+="</tr>";}
-html+="</table>";
-document.getElementById("box").innerHTML = html;} */
-
-   /*  let item = document.createElement('div');
-    item.innerHTML = ` <div class="product">
-    <div id="items"></div>
-    <div class="product-img">
-      <img id = "image" src="Images/new2.png">
-    </div>
-    <div class="product-des">
-    <div id="box"></div>
-      <h5 id="name">Coffee 1</h5>
-      <h6 id="price">Price: 99,00 DKK</h6>
-      <p id="des">You can buy this awesome product, that keeps you up all night</p>
-      <a id="basket" href="Basket.html">Add to basket</a>
-  </div>`
-  const items = document.getElementById('items');
-  items.append(item) */
-
-/*   var html = "<table border='1|1'>";
-  for (var i = 0; i < products.length; i++) {
-      html+="<tr>";
-      html+="<td>"+products[i].name+"</td>";
-      html+="<td>"+products[i].price+"</td>";
-      html+="<td>"+products[i].description+"</td>";
-      html+="<td>"+products[i].img_path+"</td>";
-      html+="</tr>";
-  }
-  html+="</table>";
-  document.getElementById("box").innerHTML = html;} */
