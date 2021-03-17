@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Index.css" />
+  <link rel="stylesheet" href="Prod.css" />
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img id="logo" src="Images/logo.png" alt="logo"></a>
+    <h2><a id="login" href="Login.html">Login<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20"
+          fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+        </svg></a><a id="login" href="Basket.html"> Basket<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20"
+          fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </svg></a></h2>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Homepage<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Coffee.html">Coffee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Tea.html">Tea</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <h2>Choose a coffee to buy</h2>
+
+    <section class="products" id="products">
+    </section>  
+        <!-- <div class="product-image">
+          <a href="Coffee1.html">
+            <img src="Images/new2.png">
+          </a>
+        </div>
+        <div class="product-info">
+          <h5>Coffee 1</h5>
+          <h6>Price: 99,00 DKK</h6>
+          <p>This is an awesome product</p>
+          <a href="Coffee1.html">See description</a><br>
+          <a href="Basket.html">Add to basket</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <a href="Coffee1.html">
+          <img src="Images/new2.png">
+        </a>
+        </div>
+        <div class="product-info">
+          <h5>Coffee 2</h5>
+          <h6>Price: 99,00 DKK</h6>
+          <p>This is an awesome product</p>
+          <a href="Coffee1.html">See description</a><br>
+          <a href="Basket.html">Add to basket</a>
+        </div>
+      </div> -->
+
+     
+    
+
+  </main>
+  <script src="main.js"></script>
+  <script>
+    document.body.onload = 
+    allCoffees();
+    loadProducts(coffees);
+  </script>
+</body>
+
+</html> 

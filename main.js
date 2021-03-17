@@ -4,6 +4,38 @@ let itemDes = []
 
 function loadProducts(product) {
     product.map((product, i)=> {
+        /* let item = document.createElement('div'); */
+        let item = document.createElement('div');
+        item.id = 'content';
+        item.className = 'product-card';
+        item.innerHTML = 
+        `<div class="product-image">
+            <a class="links" href="Coffee1.html">
+            <img src="${product.img_path}">
+                </a>
+            </div>
+            <div class="product-info">
+            <h5 class="name">${product.name}</h5>
+                <h6 class="price">${product.price} DKK</h6>
+                <p class="des">${product.description}</p>
+                <p class="links"> <a href="Coffee1.html">See more information</a><br><br></p>
+                <button class="add">Add to cart</button>
+            </div>    
+            </div>
+        </div>`
+        const products = document.getElementById('products');
+        item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
+            addToCart(product)
+        });
+        item.getElementsByClassName('links')[0].addEventListener('click', ()=>{
+            itemDescription(product)
+        });
+        products.append(item)
+    });
+}
+
+/* function loadProducts(product) {
+    product.map((product, i)=> {
         let item = document.createElement('div');
         item.innerHTML = 
         `<div class="allItems">
@@ -30,7 +62,7 @@ function loadProducts(product) {
         });
         items.append(item)
     });
-}
+} */
 
 function itemDescription(product){
 itemDes.push(product)
