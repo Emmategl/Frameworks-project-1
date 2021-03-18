@@ -1,24 +1,75 @@
-#logo {
-    width: 15%; /* Set a small width */
-    height: 15%;
- }
 
-p{
-    font-size: 20px;
+body{
+overflow-x: hidden;
+
+}
+/*Fonts*/
+h1 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+  padding-left: 2%;
+  padding-top: 2%;
 }
 
 h2{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  padding-left: 2%;
+  padding-top: 2%;
   text-align: center;
-  padding-bottom: 20px;
-  padding-right: 20px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  color: black;
+  padding-left: 2%;
+  padding-top: 2%;
+  text-align: center;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+a {
+  color: rgb(73, 116, 56);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+a:hover {
+  color: rgb(21, 41, 13);
+}
+
+button{
+  color: white;
+  background-color: rgb(73, 116, 56);
+  border-radius: 4px;
+}
+
+button:hover{
+  color: white;
+  background-color: rgb(21, 41, 13);
 }
 
 .popular{
   background-color: #f0f0f0;
 }
 
-
+#logo {
+  width: 15%; /* Set a small width */
+  height: 15%;
+}
 #login{
     font-size: 20px;
     float: right;
