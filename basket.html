@@ -7,55 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cart</title>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="navigation.css"/>
     <link rel="stylesheet" href="basket.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <script src="Login.js"></script>
+  
 </head>
 <body>
   <header>
     <a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
     <nav>
     <ul class="topNav">
-      <li style="float:right"><a href="login.html">Login</a></li>
+      <li style="float:right"><a href="login.html" >Login</a></li>
       <li style="float:right"><a href="basket.html">Basket</a></li>
     </ul>
     <ul class="bottomNav">
       <li><a href="index.html">Home</a></li>
-      <li><a href="coffeeProducts.html">Coffess</a></li>
+      <li><a href="allProducts.html">All products</a></li>
+      <li><a href="coffeeProducts.html">Coffee</a></li>
       <li><a href="teaProducts.html">Tea</a></li>
     </ul>
     </nav>
     </header>
     
-    <!-- <a href="Products.html">Go back to shop</a>
-    <h3>Cart</h3>
-    <div id="items"></div>
-    <div id="total"></div> -->
-    <h1>Shopping Cart</h1>
+
+    <h1>Basket contents</h1>
+    <p>Here you see the content of your basket. When you have found all the products you wish to purcahse, then go to "Checkout".</p>
 
 <div class="shopping-cart">
-  <div class="column-labels">
-    <label class="product-image"></label>
-    <label class="label-details"></label>
-    <label class="label-price">Price</label>
-    <label class="label-removal">Remove</label>
-  </div>
+  <div class="row">
 <div id="items">
   
+</div>
 </div>
 <div class="totals">
     <div class="totals-item">
       <p class="totals-value" id="cart-subtotal">00.00</p>
     </div>
-      <button class="checkout">Checkout</button>
+      <button class="btn checkout">CHECKOUT</button>
 </div>
 
 
     <script src="main.js"></script>
     <script>
       document.body.onload = loadCart();
-      
+      document.getElementsByClassName('btn checkout')[0].addEventListener('click', (e)=>{
+        alert("Thank you for your purchase");          
+        });
     </script>
    
 

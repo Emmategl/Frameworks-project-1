@@ -7,7 +7,7 @@ ul {
 
 .bottomNav{
     border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
+    background-color: rgb(224, 230, 221);
 }
 
 .topNav{
@@ -15,7 +15,7 @@ ul {
 }
 
 .topNav a:hover{
-    color:rgb(196, 196, 196);
+    color:rgb(143, 140, 140);
 }
 
 li {
@@ -33,7 +33,7 @@ li a {
 }
 
 .bottomNav li a:hover {
-  background-color: #ddd;
+  background-color: rgb(176, 187, 170);
 }
 
 

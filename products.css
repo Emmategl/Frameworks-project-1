@@ -10,16 +10,16 @@
   }
   
   .product-card {
-    display: flex;
-    flex-direction: column;
     padding: 1%;
-    flex: 1 20%;
+    flex: 1 18%;
     background-color: #FFF;
   }
-
+h2{
+  margin:0;
+}
 
 .name{
-  height: 70px;
+  height: 55px;
 }  
 .des{
   height: 60px;
@@ -32,15 +32,12 @@
   
   .product-info {
     margin-top: 0;
-    padding-top: 20px;
+    
     text-align: center;
     
   }
   
-  .product-image img {
-    max-width: 100%;
-  }
-
+  
  /*  .product-image img:hover {
     border: 2px solid rgb(0, 0, 0);
   } */
@@ -68,3 +65,4 @@
 button{
   margin-bottom: 3%;
 }
+

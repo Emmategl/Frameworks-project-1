@@ -4,7 +4,7 @@ overflow-x: hidden;
 }
 /*Fonts*/
 h1 {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:"Merriweather", sans-serif; 
   font-size: 50px;
   font-weight: bold;
   color: black;
@@ -13,7 +13,7 @@ h1 {
 }
 
 h2{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: "Merriweather", sans-serif; 
   font-size: 25px;
   font-weight: bold;
   color: black;
@@ -23,7 +23,7 @@ h2{
 }
 
 h3 {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: "Merriweather", sans-serif; 
   font-size: 19px;
   color: black;
   padding-left: 2%;
@@ -32,7 +32,7 @@ h3 {
 }
 
 p{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Muli", sans-serif; 
     font-size: 16px;
     padding-right: 2%;
     padding-left: 2%;
@@ -61,13 +61,11 @@ a:hover {
   padding: 5% 15%;
   text-align: center;
   font-weight: 700;
-}
-
-.add {
   -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
-.add:hover {
+
+.btn:hover {
   box-shadow: 0 0 40px 40px #A2AE79 inset;
 }
 
@@ -178,8 +176,6 @@ a:hover {
 
   .footer {
     flex: 1;
-    height: 200px;
-    background-color: #d3d8c1;
-    color: white;
-    text-align: center;
   }
+
+  

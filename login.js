@@ -20,3 +20,8 @@ function store() {
     let inputLname = document.getElementById("lname");
     localStorage.setItem("lname", inputLname.value);
 }
+
+function deleteStore() {
+    localStorage.setItem("fname", "");
+    localStorage.setItem("lname", "");
+}
