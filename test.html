@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="Index.css" />
   <link rel="stylesheet" href="Prod.css" />
+  <link rel="stylesheet" href="test.css" />
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -22,6 +23,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="test.js"></script>
 </head>
 
 <body>
@@ -60,38 +62,30 @@
   <main>
     <h2>Choose a coffee to buy</h2>
 
-    <section class="products" id="products">
-    </section>  
-        <!-- <div class="product-image">
-          <a href="Coffee1.html">
-            <img src="Images/new2.png">
-          </a>
-        </div>
-        <div class="product-info">
-          <h5>Coffee 1</h5>
-          <h6>Price: 99,00 DKK</h6>
-          <p>This is an awesome product</p>
-          <a href="Coffee1.html">See description</a><br>
-          <a href="Basket.html">Add to basket</a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image">
-          <a href="Coffee1.html">
-          <img src="Images/new2.png">
-        </a>
-        </div>
-        <div class="product-info">
-          <h5>Coffee 2</h5>
-          <h6>Price: 99,00 DKK</h6>
-          <p>This is an awesome product</p>
-          <a href="Coffee1.html">See description</a><br>
-          <a href="Basket.html">Add to basket</a>
-        </div>
-      </div> -->
-
-     
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+      <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+      <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+      <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+    </div>
+    
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+    <div class="container">
+      <div class="filterDiv cars">BMW</div>
+      <div class="filterDiv colors fruits">Orange</div>
+      <div class="filterDiv cars">Volvo</div>
+      <div class="filterDiv colors">Red</div>
+      <div class="filterDiv cars animals">Mustang</div>
+      <div class="filterDiv colors">Blue</div>
+      <div class="filterDiv animals">Cat</div>
+      <div class="filterDiv animals">Dog</div>
+      <div class="filterDiv fruits">Melon</div>
+      <div class="filterDiv fruits animals">Kiwi</div>
+      <div class="filterDiv fruits">Banana</div>
+      <div class="filterDiv fruits">Lemon</div>
+      <div class="filterDiv animals">Cow</div>
+    </div>
     
 
   </main>

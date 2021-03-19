@@ -2,29 +2,28 @@
 
 let itemDes = []
 
+
 function loadProducts(product) {
     product.map((product, i)=> {
-        /* let item = document.createElement('div'); */
         let item = document.createElement('div');
         item.id = 'content';
         item.className = 'product-card';
         item.innerHTML = 
         `<div class="product-image">
-            <a class="links" href="Coffee1.html">
+            <a class="links" href="productDescription.html">
             <img src="${product.img_path}">
                 </a>
             </div>
             <div class="product-info">
             <h2 class="name">${product.name}</h2>
-                <h3 class="price">${product.price} DKK</h3>
                 <p class="des">${product.description}</p>
-                <p class="links"> <a href="Coffee1.html">See more information</a><br><br></p>
-                <button class="add">Add to cart</button>
+                <p class="price">Price: ${product.price} DKK</p>
+                <button class="btn add">ADD TO CART</button>
             </div>    
             </div>
         </div>`
         const products = document.getElementById('products');
-        item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
+        item.getElementsByClassName('btn add')[0].addEventListener('click', ()=>{
             addToCart(product)
         });
         item.getElementsByClassName('links')[0].addEventListener('click', ()=>{
@@ -34,34 +33,15 @@ function loadProducts(product) {
     });
 }
 
-/* function loadProducts(product) {
-    product.map((product, i)=> {
-        let item = document.createElement('div');
-        item.innerHTML = 
-        `<div class="allItems">
-        <div class="product-image">
-            <a class="links" href="Coffee1.html">
-            <img src="${product.img_path}">
-                </a>
-            </div>
-            <div class="product-info">
-            <h5 class="name">${product.name}</h5>
-                <h6 class="price">${product.price} DKK</h6>
-                <p class="des">${product.description}</p>
-                <p class="links"> <a href="Coffee1.html">See more information</a><br><br></p>
-                <button class="add">Add to cart</button>
-            </div>    
-            </div>
-        </div>`
-        const items = document.getElementById('items');
-        item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
-            addToCart(product)
-        });
-        item.getElementsByClassName('links')[0].addEventListener('click', ()=>{
-            itemDescription(product)
-        });
-        items.append(item)
-    });
+/* function filter(tag){
+    if(tag == coffee){
+        allCoffees()
+    }
+
+    if(tag == tea){
+        allTeas()
+    }
+
 } */
 
 function itemDescription(product){
@@ -120,21 +100,21 @@ function loadCart() {
         item.innerHTML =
     `<div class="row">
         <div class="product">
-            <div class="col1">
+            <div class="col11">
                 <div class="product-image">
                 <img src="${product.img_path}">
                 </div>
             </div>
-            <div class="col2">
+            <div class="col22">
                 <div class="product-details">
-                <div class="product-title">${product.name}</div>
+                <h2 class="product-title">${product.name}</h2>
                 <p class="product-description">${product.description}</p>
                 </div>
             </div>
-            <div class="col3">
-                <div class="product-price">${product.price} DKK</div>
+            <div class="col33">
+                <p class="product-price">${product.price} DKK</p>
             </div>
-            <div class="col5">
+            <div class="col44">
                 <div class="product-removal">
                     <button class="remove">
                         Remove
@@ -234,184 +214,185 @@ function allTeas(){
 let products = [
      {
        id: 1,
-       name: "Coffee1",
-       price:5,
-       img_path: "Images/new1.png",
-       description: "coffe 1 description",
-       quantity: 5,
+       name: "Kenya",
+       price:50,
+       img_path: "Images/Coffees/1.png",
+       description: "Tasting notes: Grapefruit, Date, Honey",
+       quantity: 1,
        type: "coffee",
    },
    {
        id: 2,
-       name: "Coffee2",
-       price:10,
-       img_path: "Images/new3.png",
-       description: "coffee 2 description",
+       name: "Colombia El Carmen",
+       price:45,
+       img_path: "Images/Coffees/2.png",
+       description: "Tasting notes: Caramel, Chocolate, Red fruits",
        quantity: 1,
        type: "coffee",
       
    },
     {
        id: 3,
-       name: "Coffee3",
-       price:15,
-       img_path: "Images/new1.png",
-       description: "coffee 3 description",
+       name: "Starbucks House Blend",
+       price:45,
+       img_path: "Images/Coffees/3.png",
+       description: "Tasting notes: Toffee, Cinnamon, Lemon",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 4,
-       name: "Coffee4",
-       price:7,
-       img_path: "Images/new3.png",
-       description: "coffe 1 description",
+       name: "Sweethear Colombia",
+       price:60,
+       img_path: "Images/Coffees/4.png",
+       description: "Tasting notes: Caramel, Apple, Chocolate",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 5,
-       name: "Coffee5",
-       price:13,
-       img_path: "Images/new3.png",
-       description: "coffee 2 description",
+       name: "Battlecheeck coffee",
+       price:75,
+       img_path: "Images/Coffees/5.png",
+       description: "Tasting notes: Caramel, Chocolate, Raisins",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 6,
-       name: "Coffee6",
-       price:125,
-       img_path: "Images/new3.png",
-       description: "coffee 3 description",
+       name: "Ethiopia",
+       price:109,
+       img_path: "Images/Coffees/6.png",
+       description: "Tasting notes: Jasmine, Lemon Drop, Honey",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 7,
-       name: "Coffee7",
-       price: 15,
-       img_path: "Images/new1.png",
-       description: "coffee 3 description",
+       name: "Ethiopia Agaro Family",
+       price: 120,
+       img_path: "Images/Coffees/7.png",
+       description: "Tasting notes: Dried Apricot, Chamomille",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 8,
-       name: "Coffee8",
-       price: 7,
-       img_path: "Images/new3.png",
-       description: "coffe 1 description",
+       name: "Brooklyn - Partners",
+       price: 65,
+       img_path: "Images/Coffees/8.png",
+       description: "Tasting notes: Milk chocolate, Dried fruit",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 9,
-       name: "Coffee9",
-       price: 13,
-       img_path: "Images/new1.png",
-       description: "coffee 2 description",
+       name: "Blue Bottle Coffee",
+       price: 70,
+       img_path: "Images/Coffees/9.png",
+       description: "Tasting notes: Rose, Elderflower, Lime",
        quantity: 1,
        type: "coffee",
    },
    {
        id: 10,
-       name: "Coffee10",
-       price: 125,
-       img_path: "Images/new3.png",
-       description: "coffee 3 description",
+       name: "The Goodlife",
+       price: 55,
+       img_path: "Images/Coffees/10.png",
+       description: "Tasting notes: Spicy red wine, Nutmeg",
        quantity: 1,
        type: "coffee",
    },
 
-{
- id: 12,
- name: "Tea1",
- price: 125,
- img_path: "Images/new2.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 13,
- name: "Tea2",
- price: 125,
- img_path: "Images/new4.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 14,
- name: "Tea3",
- price: 125,
- img_path: "Images/new2.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 15,
- name: "Tea4",
- price: 125,
- img_path: "Images/new4.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 16,
- name: "Tea5",
- price: 125,
- img_path: "Images/new2.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 17,
- name: "Tea6",
- price: 125,
- img_path: "Images/new4.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 18,
- name: "Tea7",
- price: 125,
- img_path: "Images/new2.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 19,
- name: "Tea8",
- price: 125,
- img_path: "Images/new4.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 20,
- name: "Tea9",
- price: 125,
- img_path: "Images/new2.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-{
- id: 21,
- name: "Tea10",
- price: 125,
- img_path: "Images/new4.png",
- description: "coffee 3 description",
- quantity: 1,
- type: "tea",
-},
-]
+   {
+        id: 11,
+        name: "Black tea",
+        price: 35,
+        img_path: "Images/Teas/11.png",
+        description: "Tasting notes: Cacao, Herbal, Honey, Vanilla",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 12,
+        name: "Green tea",
+        price: 40,
+        img_path: "Images/Teas/12.png",
+        description: "Tasting notes: Cool mint, Ginger, Spices",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 13,
+        name: "Chai tea",
+        price: 59,
+        img_path: "Images/Teas/13.png",
+        description: "Tasting notes: Cinnamon, Cardamom, Ginger",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 14,
+        name: "Matcha tea",
+        price: 70,
+        img_path: "Images/Teas/14.png",
+        description: "Tasting notes: Vegetal, Bitterness, Nuttiness",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 15,
+        name: "Ginger tea",
+        price: 125,
+        img_path: "Images/Teas/15.png",
+        description: "Tasting notes: Ginger, Lemon, Mint, Orange",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 16,
+        name: "Rooibos tea",
+        price: 35,
+        img_path: "Images/Teas/16.png",
+        description: "Tasting notes:  Pumpkin, Spices, Herbal",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 17,
+        name: "Mega Matcha tea",
+        price: 65,
+        img_path: "Images/Teas/17.png",
+        description: "Tasting notes: Matcha, Vanilla, Apple, Pear",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 18,
+        name: "Lemon & Honey tea",
+        price: 80,
+        img_path: "Images/Teas/18.png",
+        description: "Tasting notes: Lemon, Honey, Orange",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 19,
+        name: "Earl Grey tea",
+        price: 75,
+        img_path: "Images/Teas/19.png",
+        description: "Tasting notes: Bergamot, Citrus, Floral",
+        quantity: 1,
+        type: "tea",
+   },
+   {
+        id: 20,
+        name: "Fruit tea",
+        price: 55,
+        img_path: "Images/Teas/20.png",
+        description: "Tasting notes: Vanilla, Orange, Honey.",
+        quantity: 1,
+        type: "tea",
+   }
+   ]
+   
