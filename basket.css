@@ -60,13 +60,12 @@
 
 .checkout{
     float: right;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
     margin-right: 2%;
     border-radius: 0.6em;
     color: #234331;
     font-size: 20px;
     padding: 1% 1%;
-
 }
 
 .checkout:hover{

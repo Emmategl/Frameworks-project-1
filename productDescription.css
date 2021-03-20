@@ -2,6 +2,7 @@
 .product {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 5%;
     
   }
 
@@ -10,6 +11,8 @@
     /* background-color:rgb(110, 160, 110); */
     justify-content: center;
     padding: 4%;
+    height: 100%;
+    width: 100%;
   }
   
   .product-des {
