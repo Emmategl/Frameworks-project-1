@@ -4,24 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kaff & t</title>
-     <!-- Bootstrap 4 Default CSS -->
+    <title>Hot Liquids</title>
+     <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-
      <!-- Font Awesome CSS -->
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-   
      <!-- Animate CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-     
      <!-- JQuery Plugin -->
- 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- 
-   <!-- Bootstrap JQuery Plugin -->
- 
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <!-- Bootstrap JQuery Plugin -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="navigation.css"/>
     <link rel="stylesheet" href="Carousel.css"/>
@@ -30,44 +23,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <script src="Login.js"></script>
     <script src="main.js"></script>
-    
 </head>
 <body>
   
   <header>
     <a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
     <nav>
-    <ul class="topNav">
-      <li style="float:right"><a href="login.html">Login</a></li>
-      <li style="float:right"><a href="basket.html">Basket</a></li>
-    </ul>
-    <ul class="bottomNav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="allProducts.html">All products</a></li>
-      <li><a href="coffeeProducts.html">Coffee</a></li>
-      <li><a href="teaProducts.html">Tea</a></li>
-    </ul>
+      <ul class="topNav">
+        <li style="float:right"><a href="login.html">Login</a></li>
+        <li style="float:right"><a href="basket.html">Basket</a></li>
+      </ul>
+      <ul class="bottomNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="allProducts.html">All products</a></li>
+        <li><a href="coffeeProducts.html">Coffee</a></li>
+        <li><a href="teaProducts.html">Tea</a></li>
+      </ul>
     </nav>
-    </header>
+  </header>
 
-<main class>
-  <!-- <div class="row m-0 p-0"> -->
-  <div class="rowPicture">
-    <div class="column1"></div>
-    <div class="column2"><a href="coffeeProducts.html"><img id="frontPictures" src="Images/Homepage/Coffee.jpg" alt="See all our coffees"></a> </div>
-    <div class="column3"><a href="teaProducts.html"><img id="frontPictures" src="Images/Homepage/Tea.jpg" alt="See all our coffees"></a> </div>
-    <div class="column4"></div>
+<main>
+    <div class="rowPicture">
+      <div class="column1"></div>
+      <div class="column2"><a href="coffeeProducts.html"><img id="frontPictures" src="Images/Homepage/Coffee.jpg" alt="See all our coffees"></a> </div>
+      <div class="column3"><a href="teaProducts.html"><img id="frontPictures" src="Images/Homepage/Tea.jpg" alt="See all our coffees"></a> </div>
+      <div class="column4"></div>
     </div>
-  </div>
-</div>
-
-   <!--  <h2 id="message">See all our best selling popular products!</h1>
-    <div class="row">
-          <div class="col1"><a href="Coffee.html"><img id="newprod" src="Images/new1.png" alt="See all our coffees"></a> </div>
-          <div class="col2"><a href="Tea.html"><img id="newprod" src="Images/new2.png" alt="See all our coffees"></a> </div>
-          <div class="col3"><a href="Coffee.html"><img id="newprod" src="Images/new3.png" alt="See all our coffees"></a> </div>
-          <div class="col4"><a href="Tea.html"><img id="newprod" src="Images/new4.png" alt="See all our coffees"></a> </div>
-    </div> -->
+  
  <!-- Carousel element -->
     <div class="container">
       <div class="row ">
@@ -75,7 +57,8 @@
               <h3 class="text-center carousel-title"id="message">See all our best selling products!</h3>
               <hr>
               <div class="col-md-12">
-              <!-- Arrow on computers -->
+
+              <!-- Arrow on desktop -->
                   <div class="button-placement d-none d-sm-none d-md-block ">
                       <a class="btn btn-sm btn-arrow" href="#carouselExample" role="button" data-slide="prev"> <i class="fas fa-chevron-circle-left"></i> </a>
                       <a class="btn btn-sm btn-arrow" href="#carouselExample" role="button" data-slide="next"> <i class="fas fa-chevron-circle-right"></i> </a>
@@ -89,7 +72,7 @@
               </div>
           </div>
           
-          <!-- Carousel for computers -->
+          <!-- Carousel on desktop -->
           <div id="carouselExample" class="carousel slide d-none d-sm-none d-md-block" data-ride="carousel" >
               <div class="carousel-inner" >
                   <div class="carousel-item active">
@@ -103,44 +86,23 @@
               </div>
           </div>
           
-            <!-- Carousel for smartphones -->
+            <!-- Carousel on smartphones -->
           <div id="carouselExampleMobile" class="carousel slide d-md-none d-lg-none d-xl-none" data-ride="carousel">
               <div class="carousel-inner" id="here">    
+              </div>
+          </div>
       </div>
+    </div>
+
+  <!-- Four picture banner -->
+  <div class="rowBanner">
+    <div class="colmn"><a href="teaProducts.html"><img id="newprod" src="Images/Homepage/Flavours.jpg" alt="See all our coffees"></a> </div>
+    <div class="colmn"><a href="coffeeProducts.html"><img id="newprod" src="Images/Homepage/Farmer.jpg" alt="See all our coffees"></a> </div>
+    <div class="colmn"><a href="teaProducts.html"><img id="newprod" src="Images/Homepage/World.jpg" alt="See all our coffees"></a> </div>
+    <div class="colmn"><a href="coffeeProducts.html"><img id="newprod" src="Images/Homepage/Retailer.jpg" alt="See all our coffees"></a> </div>
   </div>
-</div>
-</div>
-
- <div class="rowInfo">
-    <div class="colmns1"></div>
-       <div class="colmns2"><a href="coffeeProducts.html"><img id="newprod" src="Images/test.png" alt="See all our coffees"></a> </div>
-       <div class="colmns3"><p>Tea is one of the Danes' predicted hot drinks, we have been drinking in Denmark since the 17th century and are still absolutely crazy about it. Unlike back then, we have now discovered the huge selection of different kinds of tea. The white tea, the green tea, the black tea, Chai tea, etc. There is something for everyone in our Coffee and House. Come by and let us help you find the perfect one for your taste.</p></div>
-       <div class="colmns4"></div>
-</div>    
-
-<div class="rowInfo">
-  <div class="colmns1"></div>
-     <div class="colmns3"><p>Tea is one of the Danes' predicted hot drinks, we have been drinking in Denmark since the 17th century and are still absolutely crazy about it. Unlike back then, we have now discovered the huge selection of different kinds of tea. The white tea, the green tea, the black tea, Chai tea, etc. There is something for everyone in our Coffee and House. Come by and let us help you find the perfect one for your taste.</p></div>
-     <div class="colmns2"><a href="coffeeProducts.html"><img id="newprod" src="Images/test.png" alt="See all our coffees"></a> </div>
-     <div class="colmns4"></div>
-    </div>    
- 
-    <div class="rowInfo">
-      <div class="colmns1"></div>
-      <div class="colmns2"><a href="coffeeProducts.html"><img id="newprod" src="Images/test.png" alt="See all our coffees"></a> </div>
-     <div class="colmns3"><p>Tea is one of the Danes' predicted hot drinks, we have been drinking in Denmark since the 17th century and are still absolutely crazy about it. Unlike back then, we have now discovered the huge selection of different kinds of tea. The white tea, the green tea, the black tea, Chai tea, etc. There is something for everyone in our Coffee and House. Come by and let us help you find the perfect one for your taste.</p></div>
-     <div class="colmns4"></div>
-    </div>    
-
-     <div class="rowBanner">
-  <div class="colmn"><a href="coffeeProducts.html"><img id="newprod" src="Images/new1.png" alt="See all our coffees"></a> </div>
-  <div class="colmn"><a href="teaProducts.html"><img id="newprod" src="Images/new2.png" alt="See all our coffees"></a> </div>
-  <div class="colmn"><a href="coffeeProducts.html"><img id="newprod" src="Images/new3.png" alt="See all our coffees"></a> </div>
-  <div class="colmn"><a href="teaProducts.html"><img id="newprod" src="Images/new4.png" alt="See all our coffees"></a> </div>
-</div> 
 </main>
 
-<!-- Footer -->
 <footer>
     <div class="footer">
         <div class="navigation">
@@ -171,10 +133,13 @@
         </div>
 </footer>
 
-<!-- Script for display of username and carousel -->
-<script> document.body.onload = addUserName();</script> <!-- Where do i put this? -->
+<!-- Script to display username -->
+<script> document.body.onload = addUserName();</script>
+<!-- Script to load carousel for mobile - non-active -->
 <script> document.body.onload = loadCarouselMobile()</script> 
-<script> document.body.onload = loadCarouselPC()</script> <!-- Where do i put this? -->
+<!-- Script to load carousel for desktop -->
+<script> document.body.onload = loadCarouselPC()</script>
+<!-- Script to load carousel for mobile - active -->
 <script> document.body.onload = loadCarouselMobileActive()</script> 
 </body>
 </html>

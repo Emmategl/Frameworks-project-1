@@ -14,6 +14,14 @@ function addUserNameToLogin() {
     }
 }
 
+function addUserNameToBasket() {
+    const userName = localStorage.fname;
+    if (userName !== undefined) {
+        document.getElementById("messageLogin").innerHTML =
+        userName + ", here you see the content of your basket. When you have found all the products you wish to purchase, then go to 'Checkout'.";
+    }
+}
+
 function store() {
     let inputFname = document.getElementById("fname");
     localStorage.setItem("fname", inputFname.value);

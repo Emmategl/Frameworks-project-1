@@ -11,24 +11,23 @@
     flex-wrap: wrap;
     margin: 1%;
     padding: 1%;
-    
 }
 
 .product-details{
     flex:2;
-   
 }
 
 .product-image{
     flex: 1;
     border-style: solid;
-    border-color: black;
-    border-width: 2px;
+    border-color: rgb(134, 153, 139);
+    border-width: 1px;
 }
 
 .product-price{
     flex:1;
 }
+
 .product-remove{
     flex:1;
     align-items: left;

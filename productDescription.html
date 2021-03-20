@@ -11,31 +11,30 @@
     <link rel="stylesheet" href="navigation.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
-      </main>  
-    
+    <script src="main.js"></script>
 </head>
+
 <body>
   <header>
     <a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
     <nav>
-    <ul class="topNav">
-      <li style="float:right"><a href="login.html">Login</a></li>
-      <li style="float:right"><a href="basket.html">Basket</a></li>
-    </ul>
-    <ul class="bottomNav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="allProducts.html">All products</a></li>
-      <li><a href="coffeeProducts.html">Coffess</a></li>
-      <li><a href="teaProducts.html">Tea</a></li>
-    </ul>
+      <ul class="topNav">
+        <li style="float:right"><a href="login.html">Login</a></li>
+        <li style="float:right"><a href="basket.html">Basket</a></li>
+      </ul>
+      <ul class="bottomNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="allProducts.html">All products</a></li>
+        <li><a href="coffeeProducts.html">Coffee</a></li>
+        <li><a href="teaProducts.html">Tea</a></li>
+      </ul>
     </nav>
-    </header>
+  </header>
 
 <main>
     <div id="items"></div>
 </main>
 
- <!-- Footer -->
  <footer>
   <div class="footer">
       <div class="navigation">
@@ -66,11 +65,10 @@
       </div>
 </footer>
 
-<script src="main.js"></script>
-
-  <script>
+<!-- Script to load description of the clicked product -->
+<script>
   document.body.onload = loadDescription();
-   /* document.body.onload = loadProducts(); */
 </script>
+
 </body>
 </html>

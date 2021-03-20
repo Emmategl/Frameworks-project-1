@@ -2,7 +2,6 @@
     display: flex;
     background-color:  rgb(224, 230, 221);
     padding: 3%;
-    /* margin-top: 6%; */
     width: 100%;
   }
   .navigation {
@@ -19,6 +18,6 @@
   }
 
   a {
-    color: rgb(73, 116, 56);
+    color: black;
     padding: 0;
   }

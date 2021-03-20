@@ -1,8 +1,6 @@
-//Load product page
-
-let itemDes = []
 
 
+/* Load the list of products. in HTML choose which productlist to display */
 function loadProducts(product) {
     product.map((product, i)=> {
         let item = document.createElement('div');
@@ -32,35 +30,20 @@ function loadProducts(product) {
     });
 }
 
-/* function filter(tag){
-    if(tag == coffee){
-        allCoffees()
-    }
-
-    if(tag == tea){
-        allTeas()
-    }
-
-} */
-
+/* Save information on the clicked product */
+let itemDes = []
 function itemDescription(product){
 itemDes.push(product)
 localStorage.setItem('des', JSON.stringify(itemDes));
 }
 
 
-//create an array to hold all element in the cart
+/* create an array to hold all elements in the cart */
 let cart = [];
-
 
 //Add elements to the cart
 function addToCart(product){
-    //Import the cart
     var existingCart = localStorage.getItem('cart');
-    //If cart exists convert to array
-    // If cart does not exists, create an array
-
-
     existingCart = existingCart ? JSON.parse(existingCart) : [];
     console.log(existingCart)
     for (let j = 0; j < existingCart.length; j++) {
@@ -76,20 +59,17 @@ function addToCart(product){
             localStorage.setItem('cart', JSON.stringify(existingCart));
             return
         }
-        }
+    }
+
     for (let j = 0; j == existingCart.length;){
         existingCart.push(product)
         localStorage.setItem('cart', JSON.stringify(existingCart));
         return
     }
-    // Add the product to the existing cart
-    
-    // Save the updated cart to localStorage
-    localStorage.setItem('cart', JSON.stringify(existingCart));
-      
+    localStorage.setItem('cart', JSON.stringify(existingCart)); 
 }
 
-//Load the cart page
+/* Load the cart */
 function loadCart() {
     let cartData = localStorage.getItem('cart');
     cart = JSON.parse(cartData)
@@ -97,8 +77,7 @@ function loadCart() {
     cart.map((product)=> {
         let item = document.createElement('div');
         item.innerHTML =
-    `
-        <div class="product">
+    `<div class="product">
                 <div class="product-image">
                 <img src="${product.img_path}">
             </div>
@@ -117,14 +96,13 @@ function loadCart() {
         const items = document.getElementById('items');
         item.getElementsByClassName('btn remove')[0].addEventListener('click', (e)=>{
             remove(product, e)
-            
         });
         items.append(item)
         calculatePrice() 
     });
  }
 
-//Calculate the total price for the objects in the cart
+/* Calculate the total price for the objects in the cart */
  function calculatePrice() {
     let cartData = localStorage.getItem('cart');
     cart = JSON.parse(cartData)
@@ -135,65 +113,56 @@ function loadCart() {
             sum += price;
         }
     });
-
-    //Update the price
     document.getElementById("cart-subtotal").innerHTML = "Subtotal: " + sum;
 }
 
-//remove elements from the cart
+/* Remove product from cart */
 let removed = []
 function remove(product, e){
     var existingCart = localStorage.getItem('cart');
-    //If cart exists convert to array
-    // If cart does not exists, create an array
     existingCart = existingCart ? JSON.parse(existingCart) : [];
     console.log(existingCart)
     
-   for (var i = existingCart.length - 1; i >= 0; i--) {
-    if (existingCart[i].id == product.id) { 
-        existingCart.splice(i, 1);
-    }
-}
-   localStorage.setItem('cart', JSON.stringify(existingCart))
-   e.target.parentElement.parentElement.parentElement.remove();
-   calculatePrice()
+        for (var i = existingCart.length - 1; i >= 0; i--) {
+            if (existingCart[i].id == product.id) { 
+                existingCart.splice(i, 1);
+            }
+        }
+    localStorage.setItem('cart', JSON.stringify(existingCart))
+    e.target.parentElement.parentElement.parentElement.remove();
+    calculatePrice()
 }
 
-    function loadDescription(){
-        var itemDess = localStorage.getItem('des');
-        itemDesss = JSON.parse(itemDess)
-        console.log(itemDess)
-
-        itemDesss.map((i)=> {
-        let item = document.createElement('div');
+/* Load description of clicked product */
+function loadDescription(){
+    var itemDess = localStorage.getItem('des');
+    itemDesss = JSON.parse(itemDess)
+    console.log(itemDess)
+    
+    itemDesss.map((i)=> {
+    let item = document.createElement('div');
         item.className = 'product';
-
         item.innerHTML =
-        `
-        <div class="product-img">
-          <img id = "image" src="${i.img_path}">
+        `<div class="product-img">
+        <img id = "image" src="${i.img_path}">
         </div>
         <div class="product-des">
-          <h1 id="name">${i.name}</h1>
-          <h3 id="price">Price: ${i.price} DKK</h3>
-          <p id="des">${i.description}</p>
-          <p id="des">${i.longDescription}</p>
-          <button class="btn add">Add to cart</button>
-      </div>`
-      const items = document.getElementById('items');
-      item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
-        addToCart(i)
-    });
-    
-      items.append(item)
-      
-          
+        <h1 id="name">${i.name}</h1>
+        <h3 id="price">Price: ${i.price} DKK</h3>
+        <p id="des">${i.description}</p>
+        <p id="des">${i.longDescription}</p>
+        <button class="btn add">Add to cart</button>
+        </div>`
+    const items = document.getElementById('items');
+        item.getElementsByClassName('add')[0].addEventListener('click', ()=>{
+            addToCart(i)
+        });
+    items.append(item)  
     });
 }
 
 
-
-/* Carousel */
+/* Load carousel on desktop */
 function loadCarouselPC(){
     pcFirst();
     pcSecond()
@@ -210,7 +179,7 @@ function loadCarouselPC(){
       <p>Price: ${product.price} DKK</p>
       <div class="row">
           <div class="col-md-6">
-              <a class="btn btn-sm">Add To cart</a>
+              <a class="btn btn-sm">ADD TO CART</a>
           </div>
       </div>
   </div>`
@@ -237,10 +206,10 @@ function loadCarouselPC(){
     <p>Price: ${product.price} DKK</p>
     <div class="row">
         <div class="col-md-6">
-            <a class="btn btn-sm">Add To cart</a>
+            <a class="btn btn-sm">ADD TO CART</a>
         </div>
     </div>
-  </div>`
+    </div>`
     const products = document.getElementById('products2');
     item.getElementsByClassName('btn btn-sm')[0].addEventListener('click', ()=>{
         addToCart(product)
@@ -250,37 +219,35 @@ function loadCarouselPC(){
     });
     products.append(item)
   });
-  
   }
 
-  function loadCarouselMobileActive(){
-    mobileFirst();
-      let item = document.createElement('div');
-      item.className = 'carousel-item active';
-      item.innerHTML = 
-      `<div class="product-block">
-      <a class="links" href="productDescription.html">
-          <img class="d-block w-100" src="${carouselMobileFirst[0].img_path}" alt="Product"></a>
-          <h4>${carouselMobileFirst[0].name}</h4>
-          <p class="des">${carouselMobileFirst[0].description}</p>
-          <p>Price: ${carouselMobileFirst[0].price}</p>
-          <div class="row">
-              <div class="col-md-6">
-                  <a class="btn btn-sm" href="#">Add To cart</a>
-              </div>
-          </div>
-      </div>
-  </div>`
-      const products = document.getElementById('here');
-      item.getElementsByClassName('btn btn-sm')[0].addEventListener('click', ()=>{
-          addToCart(carouselMobileFirst[0])
-      });
-     
-      products.append(item)
-  }
+/* Load the active carousel product on mobile */
+function loadCarouselMobileActive(){
+  mobileFirst();
+    let item = document.createElement('div');
+    item.className = 'carousel-item active';
+    item.innerHTML = 
+    `<div class="product-block">
+        <a class="links" href="productDescription.html">
+        <img class="d-block w-100" src="${carouselMobileFirst[0].img_path}" alt="Product"></a>
+        <h4>${carouselMobileFirst[0].name}</h4>
+        <p class="des">${carouselMobileFirst[0].description}</p>
+        <p>Price: ${carouselMobileFirst[0].price}</p>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-sm">ADD TO CART</a>
+            </div>
+        </div>
+    </div>`
+    const products = document.getElementById('here');
+        item.getElementsByClassName('btn btn-sm')[0].addEventListener('click', ()=>{
+            addToCart(carouselMobileFirst[0])
+        });
+    products.append(item)
+}
   
+/* Load the non-active carousel products on mobile */
   function loadCarouselMobile(){
-    
     mobileSecond();
     carouselMobileSecond.map((product, i)=> {
       let item = document.createElement('div');
@@ -294,7 +261,7 @@ function loadCarouselPC(){
   <p>Price: ${product.price}</p>
   <div class="row">
       <div class="col-md-6">
-          <a class="btn btn-sm">Add To cart</a>
+          <a class="btn btn-sm">ADD TO CART</a>
       </div>
   </div>
   </div>
@@ -311,45 +278,47 @@ function loadCarouselPC(){
   }
   
 
-
-
+/* Array of all coffees */
 let coffees = []
 function allCoffees(){
     coffees = products.filter(it => new RegExp('coffee').test(it.type))
     console.log(coffees)
 }
-
+/* Array of all teas */
 let teas = []
 function allTeas(){
     teas = products.filter(it => new RegExp('tea').test(it.type))
     console.log(teas)
 }
 
+/* Array of the products with popularity 1 */
 let carouselPcFirst =[]
 function pcFirst(){
   carouselPcFirst = products.filter(it => new RegExp('1').test(it.popularity))
   console.log(coffees)
 }
 
+/* Array of the products with popularity 2 */
 let carouselPcSecond = []
 function pcSecond(){
   carouselPcSecond = products.filter(it => new RegExp('2').test(it.popularity))
   console.log(coffees)
 }
 
+/* Array of the products with popularity 3 */
 let carouselMobileFirst = []
 function mobileFirst(){
   carouselMobileFirst = products.filter(it => new RegExp('3').test(it.popularity))
   console.log(coffees)
 }
-
+/* Array of the products with popularity 1 on mobile */
 let carouselMobileSecond = []
 function mobileSecond(){
   carouselMobileSecond = products.filter(it => new RegExp('1').test(it.popularity))
   console.log(coffees)
 }
  
-//All the products
+/* All products in the shop */
 let products = [
     {
         id: 12,
@@ -556,6 +525,5 @@ let products = [
         type: "tea",
         longDescription: "Everyone knows Earl Gray. Many people swear by the very special aroma taste that comes from the small citrus fruit, bergamot. Our Organic Earl Gray is a unique blend that we have created for you on black South Indian and Ceylon tea as well as bergamot. You get pleasant tea with the unmistakable aroma and taste of citrus.",
    }
-
    ]
    

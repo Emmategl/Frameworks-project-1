@@ -4,67 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
+    <title>Login</title>
     <link rel="stylesheet" href="navigation.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
-   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="Login.css"/>
-
-    
-      
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="Login.js"></script>
-
 </head>
-<body>
-  <header>
-    <a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
-    <nav>
-    <ul class="topNav">
-      <li style="float:right"><a href="login.html">Login</a></li>
-      <li style="float:right"><a href="basket.html">Basket</a></li>
-    </ul>
-    <ul class="bottomNav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="allProducts.html">All products</a></li>
-      <li><a href="coffeeProducts.html">Coffee</a></li>
-      <li><a href="teaProducts.html">Tea</a></li>
-    </ul>
-    </nav>
-    </header>
-          <main>
-         
-              <div class="row">
-                <div class="col1"></div>
-                <div class="col2">
-              <div class="form">
-              <h2 id="messageLogin">Write your name, email and password to login to your account</h2>
-              <form action="index.html">
-                <label for="fname">Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email.." required>
-                <label for="password">Password</label>
-                <label for="password"></label>
-                <input type="password" id="password" name="password" placeholder="Your password.." required>
-                <input type="submit" onclick="store()" value="Login">
-              </div>
-              </form>
-            </div>
-              <div class="col3"></div>
-    
-        </main>
 
-         <!-- Footer -->
+<body>
+ <header>
+   <a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
+   <nav>
+     <ul class="topNav">
+       <li style="float:right"><a href="login.html">Login</a></li>
+       <li style="float:right"><a href="basket.html">Basket</a></li>
+     </ul>
+     <ul class="bottomNav">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="allProducts.html">All products</a></li>
+       <li><a href="coffeeProducts.html">Coffee</a></li>
+       <li><a href="teaProducts.html">Tea</a></li>
+     </ul>
+   </nav>
+ </header>
+    
+  <main>   
+    <div class="row">
+      <div class="col1"></div>
+      <div class="col2">
+        <div class="form">
+          <h2 id="messageLogin">Write your name, email and password to login to your account</h2>
+          <form action="index.html">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email.." required>
+            <label for="password">Password</label>
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="Your password.." required>
+            <input type="submit" onclick="store()" value="Login">
+          </form>
+        </div>
+      </div>
+      <div class="col3"></div>
+  </main>
+
 <footer>
   <div class="footer">
       <div class="navigation">
@@ -94,6 +81,8 @@
         <p>Instagram</p>
       </div>
 </footer>
-        <script> document.body.onload = addUserNameToLogin();</script> <!-- Where do i put this? -->
+
+<!-- Script to display username -->
+<script> document.body.onload = addUserNameToLogin();</script>
 </body>
 </html>
