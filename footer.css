@@ -1,0 +1,24 @@
+.footer{
+    display: flex;
+    background-color:  rgb(224, 230, 221);
+    padding: 3%;
+    margin-top: 6%;
+    width: 100%;
+  }
+  .navigation {
+    flex: 1;
+  }
+  .information {
+    flex: 1;
+  }
+  .contact {
+    flex: 1;
+  }
+  .social {
+    flex: 1;
+  }
+
+  a {
+    color: rgb(73, 116, 56);
+    padding: 0;
+  }

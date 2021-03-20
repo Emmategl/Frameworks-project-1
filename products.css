@@ -43,7 +43,7 @@ h2{
   } */
 
   /* For tablets*/
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 767px) and (max-width: 1024px) {
     .product-card {
       flex: 1 25%;
     }

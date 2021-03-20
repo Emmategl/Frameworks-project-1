@@ -5,12 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kaff & t</title>
+     <!-- Bootstrap 4 Default CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+     <!-- Font Awesome CSS -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+   
+     <!-- Animate CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+     
+     <!-- JQuery Plugin -->
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+   <!-- Bootstrap JQuery Plugin -->
+ 
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="navigation.css"/>
+    <link rel="stylesheet" href="Carousel.css"/>
+    <link rel="stylesheet" href="footer.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
     <script src="Login.js"></script>
+    <script src="main.js"></script>
     
 </head>
 <body>
@@ -40,21 +59,100 @@
     <div class="column4"></div>
     </div>
 
-    <h2 id="message">See all our best selling popular products!</h1>
+   <!--  <h2 id="message">See all our best selling popular products!</h1>
     <div class="row">
           <div class="col1"><a href="Coffee.html"><img id="newprod" src="Images/new1.png" alt="See all our coffees"></a> </div>
           <div class="col2"><a href="Tea.html"><img id="newprod" src="Images/new2.png" alt="See all our coffees"></a> </div>
           <div class="col3"><a href="Coffee.html"><img id="newprod" src="Images/new3.png" alt="See all our coffees"></a> </div>
           <div class="col4"><a href="Tea.html"><img id="newprod" src="Images/new4.png" alt="See all our coffees"></a> </div>
-    </div>
+    </div> -->
+ <!-- Carousel element -->
+    <div class="container">
+      <div class="row ">
+          <div class="col-md-12 ">
+              <h3 class="text-center carousel-title"id="message">See all our best selling popular products!</h3>
+              <hr>
+              <div class="col-md-12">
+              <!-- Arrow on computers -->
+                  <div class="button-placement d-none d-sm-none d-md-block ">
+                      <a class="btn btn-sm btn-arrow" href="#carouselExample" role="button" data-slide="prev"> <i class="fas fa-chevron-circle-left"></i> </a>
+                      <a class="btn btn-sm btn-arrow" href="#carouselExample" role="button" data-slide="next"> <i class="fas fa-chevron-circle-right"></i> </a>
+                  </div>
+
+                <!-- Arrows on smartphones -->
+                  <div class="button-placement d-md-none d-lg-none d-xl-none">
+                      <a class="btn btn-sm btn-arrow" href="#carouselExampleMobile" role="button" data-slide="prev"> <i class="fas fa-chevron-circle-left"></i> </a>
+                      <a class="btn btn-sm btn-arrow" href="#carouselExampleMobile" role="button" data-slide="next"> <i class="fas fa-chevron-circle-right"></i> </a>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Carousel for computers -->
+          <div id="carouselExample" class="carousel slide d-none d-sm-none d-md-block" data-ride="carousel" >
+              <div class="carousel-inner" >
+                  <div class="carousel-item active">
+                      <div class="row" id="products">
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="row" id="products2">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+            <!-- Carousel for smartphones -->
+          <div id="carouselExampleMobile" class="carousel slide d-md-none d-lg-none d-xl-none" data-ride="carousel">
+              <div class="carousel-inner" id="here">    
+      </div>
+  </div>
+</div>
+</div>
+
+<h2 id="message">See all our best selling popular products!</h1>
+ <div class="row">
+       <div class="col1"><a href="Coffee.html"><img id="newprod" src="Images/new1.png" alt="See all our coffees"></a> </div>
+       <div class="col2"><a href="Tea.html"><img id="newprod" src="Images/new2.png" alt="See all our coffees"></a> </div>
+       <div class="col3"><a href="Coffee.html"><img id="newprod" src="Images/new3.png" alt="See all our coffees"></a> </div>
+       <div class="col4"><a href="Tea.html"><img id="newprod" src="Images/new4.png" alt="See all our coffees"></a> </div>
+ </div> 
 </main>
 
+<!-- Footer -->
 <footer>
     <div class="footer">
-        <p>Footer</p>
-      </div>    
+        <div class="navigation">
+          <h5>Navigation</h5>
+          <a href="index.html"><p>Homepage</p></a>
+          <a href="allProducts.html"><p>All products</p></a>
+          <a href="coffeeProducts.html"><p>Coffee</p></a>
+          <a href="teaProducts.html"><p>Tea</p></a>
+          <a href="basket.html"><p>Basket</p></a>
+          <a href="login.html"><p>Login</p></a>
+        </div>
+        <div class="information">
+          <h5>Information</h5>
+          <p>Delivery information</p>
+          <p>Returns</p>
+          <p>Cookie policy</p>
+          <p>Terms & Conditions</p>
+        </div>
+        <div class="contact">
+          <h5>Contact us</h5>
+          <p>Adress: Coffee Street 24, Copenhagen</p>
+          <p>Phone: +45 34 34 35 35</p>
+        </div>
+        <div class="social">
+          <h5>Follow us on social media</h5>
+          <p>Facebook</p>
+          <p>Instagram</p>
+        </div>
 </footer>
 
+<!-- Script for display of username and carousel -->
 <script> document.body.onload = addUserName();</script> <!-- Where do i put this? -->
+<script> document.body.onload = loadCarouselMobile()</script> 
+<script> document.body.onload = loadCarouselPC()</script> <!-- Where do i put this? -->
+<script> document.body.onload = loadCarouselMobileActive()</script> 
 </body>
 </html>

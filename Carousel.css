@@ -1,0 +1,56 @@
+.button-placement {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: right; 
+  }
+  
+  .carousel-item .product-block {
+    border: 0px solid #222;
+    padding: 2%;
+    text-align: left; }
+    .carousel-item .product-block h4 {
+      text-align: left; }
+    .carousel-item .product-block a {
+      margin: 0 0 20px; }
+  
+    .container{
+      text-align: center; 
+      align-items: center;
+      margin: auto;
+    }
+    
+    .btn-arrow{
+  padding: 0.5% 1%;
+    }
+  
+  
+  /* For mobile */
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .carousel-item .product-block {
+      margin: 0 15px; }
+  
+    .carousel-title {
+      font-size: 18px;
+      margin-top: 20px; } 
+  
+      .btn-arrow{
+        padding: 1% 2%;
+          }
+  
+          .btn{
+            padding: 2% 2%;
+              }
+    }
+  
+  
+    /* For mobile */
+  @media screen and (min-width: 767px) and (max-width: 1024px) {
+    .carousel-item .product-block {
+      margin: 0 px; }
+  
+      
+    }
+  
+  
+  

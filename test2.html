@@ -2,67 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="products.css" />
-  <link rel="stylesheet" href="navigation.css" />
-  <link rel="stylesheet" href="test.css" />
-  <!-- Latest compiled JavaScript -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kaff & t</title>
+    <script src="Login.js"></script>
+    <script src="test.js"></script>
+    <link rel="stylesheet" href="test.css"/>
+    <!-- Latest compiled JavaScript -->
+    <!-- Bootstrap 4 Default CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+    <!-- JQuery Plugin -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JQuery Plugin -->
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="navigation.css"/>
+  <link rel="stylesheet" href="test.css"/>
+
 </head>
 <body>
-<header>
-<a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
-<nav>
-<ul class="topNav">
-  <li style="float:right"><a href="login.html">Login</a></li>
-  <li style="float:right"><a href="basket.html">Basket</a></li>
-</ul>
-<ul class="bottomNav">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="coffee.html">Coffess</a></li>
-  <li><a href="tea.html">Tea</a></li>
-</ul>
-</nav>
-</header>
-  <main>
-    <h1>Coffees</h1>
-    <p>Velkommen til vores afdeling med skønne espressobønner. Her er et udvalg af friskristede hele espressobønner fra risterier som Just Coffee, Estate Coffee, Stellini og Farm Mountain. 
-      Velkommen til vores afdeling med skønne espressobønner. Her er et udvalg af friskristede hele espressobønner fra risterier som Just Coffee, Estate Coffee, Stellini og Farm Mountain.
-      Velkommen til vores afdeling med skønne espressobønner. Her er et udvalg af friskristede hele espressobønner fra risterier som Just Coffee, Estate Coffee, Stellini og Farm Mountain.
-    </p>
-  <!--   <div id="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-      <button class="btn" onclick="filterSelection('cars')"> Bitter</button>
-      <button class="btn" onclick="filterSelection('animals')"> Brand</button>
-      <button class="btn" onclick="filterSelection('fruits')"> Tea</button>
-    </div> -->
+  
+  <header>
+    <a href="index.html"><img id="logo" src="Images/logo.png" alt="logo"></a>
+    <nav>
+    <ul class="topNav">
+      <li style="float:right"><a href="login.html">Login</a></li>
+      <li style="float:right"><a href="basket.html">Basket</a></li>
+    </ul>
+    <ul class="bottomNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="allProducts.html">All products</a></li>
+      <li><a href="coffeeProducts.html">Coffee</a></li>
+      <li><a href="teaProducts.html">Tea</a></li>
+    </ul>
+    </nav>
+    </header>
 
-    <div class="myBtnContainer">
-      <button class="btn active" class="hello" id="all"> Show all</button>
-      <button class="btn" id="Coffee">Coffee</button>
-      <button class="btn" id="Tea">Tea</button>
+<main class>
+  <!-- <div class="row m-0 p-0"> -->
+  <div class="row">
+    <div class="column1"></div>
+    <div class="column2"><a href="coffeeProducts.html"><img id="frontPictures" src="Images/Coffee1.png" alt="See all our coffees"></a> </div>
+    <div class="column3"><a href="teaProducts.html"><img id="frontPictures" src="Images/tea1.png" alt="See all our coffees"></a> </div>
+    <div class="column4"></div>
     </div>
 
-    <section class="products" id="products">
-    </section>  
-</main>
-  <script src="main.js"></script>
-  <script src="test.js"></script>
-  <script>
-    document.body.onload = 
-    allCoffees();
-    loadProducts(coffees);
-  </script>
-  <script>
-   document.getElementsByClassName('myBtnContainer')[0].addEventListener('click', ()=>{
-      if(document.firstChild == 'Coffee')        {
-    console.log("hello")}
-        });
+    <h2 id="message">See all our best selling popular products!</h1>
+    <div class="row">
+          <div class="col1"><a href="Coffee.html"><img id="newprod" src="Images/new1.png" alt="See all our coffees"></a> </div>
+          <div class="col2"><a href="Tea.html"><img id="newprod" src="Images/new2.png" alt="See all our coffees"></a> </div>
+          <div class="col3"><a href="Coffee.html"><img id="newprod" src="Images/new3.png" alt="See all our coffees"></a> </div>
+          <div class="col4"><a href="Tea.html"><img id="newprod" src="Images/new4.png" alt="See all our coffees"></a> </div>
+    </div>
+    <div class="container">
+      <div class="row ">
+          <div class="col-md-12 ">
+              <h1 class="text-center carousel-title">Bootstrap 4 Product Carousel</h1>
+              <hr>
+              <div class="col-md-12">
+              <!-- For computers -->
+                  <div class="button-placement d-none d-sm-none d-md-block ">
+                      <a class="btn btn-sm btn-arrow" href="#carouselExample" role="button" data-slide="prev"> <i class="fas fa-chevron-circle-left"></i> </a>
+                      <a class="btn btn-sm btn-arrow" href="#carouselExample" role="button" data-slide="next"> <i class="fas fa-chevron-circle-right"></i> </a>
+                  </div>
 
-  </script>
- 
+                <!-- For smartphones -->
+                  <div class="button-placement d-md-none d-lg-none d-xl-none">
+                      <a class="btn btn-sm btn-arrow" href="#carouselExampleMobile" role="button" data-slide="prev"> <i class="fas fa-chevron-circle-left"></i> </a>
+                      <a class="btn btn-sm btn-arrow" href="#carouselExampleMobile" role="button" data-slide="next"> <i class="fas fa-chevron-circle-right"></i> </a>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Carousel for computers -->
+          <div id="carouselExample" class="carousel slide d-none d-sm-none d-md-block" data-ride="carousel" >
+              <div class="carousel-inner" >
+                  <div class="carousel-item active">
+                      <div class="row" id="products">
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="row" id="products2">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+            <!-- Carousel for smartphones -->
+          <div id="carouselExampleMobile" class="carousel slide d-md-none d-lg-none d-xl-none" data-ride="carousel">
+              <div class="carousel-inner" id="here">    
+      </div>
+  </div>
+  
+
+  
+
+
+
+<footer>
+    <div class="footer">
+        <p>Footer</p>
+      </div>    
+</footer>
+
+<script> document.body.onload = loadFrontpage()</script> <!-- Where do i put this? -->
+<!-- <script> document.body.onload = loadFrontpage2()</script>  -->
+<script> document.body.onload = loadFrontpageMobile()</script> 
+<script> document.body.onload = loadFrontpageMobileActive()</script> 
 </body>
 </html>

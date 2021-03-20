@@ -2,6 +2,7 @@
 body{
 overflow-x: hidden;
 }
+
 /*Fonts*/
 h1 {
   font-family:"Merriweather", sans-serif; 
@@ -27,8 +28,28 @@ h3 {
   font-size: 19px;
   color: black;
   padding-left: 2%;
+  padding-top: 5%;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Merriweather", sans-serif; 
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  padding-left: 2%;
   padding-top: 2%;
   text-align: center;
+}
+
+h5{
+  font-family: "Merriweather", sans-serif; 
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  padding-left: 2%;
+  padding-top: 2%;
+  text-align: left;
 }
 
 p{
@@ -40,7 +61,7 @@ p{
 
 a {
   color: rgb(73, 116, 56);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Muli", sans-serif; 
   font-size: 16px;
   padding-right: 2%;
   padding-left: 2%;
@@ -49,6 +70,8 @@ a {
 a:hover {
   color: rgb(21, 41, 13);
 }
+
+/*Buttons*/
 
 .btn{
   box-sizing: border-box;
@@ -69,10 +92,11 @@ a:hover {
   box-shadow: 0 0 40px 40px #A2AE79 inset;
 }
 
-
+/*Buttons*/
 #logo {
-  width: 15%; /* Set a small width */
+  width: 15%;
   height: 15%;
+  margin: 0.5%;
 }
 
 #login{
@@ -86,17 +110,9 @@ a:hover {
   text-decoration: none;
 }
 
-/* #icon{
-  height: 8%;
-  width: 8%;
-  padding-bottom: 50px;
-  padding-right: 50px;
-  float: right;
-} */
-.navbar-expand-lg{
+/* .navbar-expand-lg{
   margin-top: 5px;
-}
-
+} */
 
 .row{
   display: flex;
@@ -135,18 +151,18 @@ a:hover {
 }
 
   #frontPictures:hover {
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 5px #000;
   }
   
   #frontPictures{
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10%;
   width: 100%;
     }
 
   img{
-    /* margin-top: 20px; */
     height: 100%;
     width: 100%;
   }
@@ -169,13 +185,6 @@ a:hover {
     padding-bottom: 5%;
   }
   
- /*  .newprod{
-    border: 20px;
-    
-} */
 
-  .footer {
-    flex: 1;
-  }
 
-  
+
