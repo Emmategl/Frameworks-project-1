@@ -2,7 +2,7 @@ function addUserName() {
     const userName = localStorage.fname;
     if (userName !== undefined) {
         document.getElementById("message").innerHTML =
-            userName + ", see all our best selling popular products!";
+            userName + ", see all our best selling products!";
     }
 }
 

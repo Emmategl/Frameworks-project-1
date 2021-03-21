@@ -321,15 +321,14 @@ function mobileSecond(){
 /* All products in the shop */
 let products = [
     {
-        id: 12,
-        name: "Green tea",
-        price: 40,
-        img_path: "Images/Teas/12.png",
-        description: "Tasting notes: Cool mint, Ginger, Spices",
-        popularity: 3,
-        type: "tea",
-        longDescription: "A true classic in herbal tea. Cool Mint is without a doubt our bed selling herbal tea. Cool Mint tea is a wonderful herbal tea of various herbs, including peppermint, spiced with lemongrass and ginger. Refreshing and delicious. Cool Mint herbal tea can be enjoyed as iced tea on a warm summer day. ",
-
+    id: 12,
+    name: "Green tea",
+    price: 40,
+    img_path: "Images/Teas/12.png",
+    description: "Tasting notes: Cool mint, Ginger, Spices",
+    popularity: 3,
+    type: "tea",
+    longDescription: "A true classic in herbal tea. Cool Mint is without a doubt our best selling herbal tea. Cool Mint tea is a wonderful herbal tea of various herbs, including peppermint, spiced with lemongrass and ginger. Refreshing and delicious. Cool Mint herbal tea can also be enjoyed as iced tea on a warm summer day. ",
    },
    {
     id: 3,
@@ -339,7 +338,7 @@ let products = [
     description: "Tasting notes: Toffee, Cinnamon, Lemon",
     popularity: 1,
     type: "coffee",
-    longDescription: "This variant is called House Blend and is the first coffee that Starbucks created and has been with them ever since. The coffee comes from South and Central America and is medium roasted 100% Arabica. The frugal roasting gives a mild caramelized taste with notes of nuts and mild sweetness. This Starbucks for Nespresso is recommended as a lungo.",
+    longDescription: "This variant is called House Blend and is the first coffee that Starbucks created and it has been with them ever since. The coffee comes from South and Central America and is medium roasted 100% Arabica. The frugal roasting gives a mild caramelized taste with notes of nuts and mild sweetness. This Starbucks for Nespresso is recommended as a lungo.",
 },
    {
         id: 13,
@@ -349,7 +348,7 @@ let products = [
         description: "Tasting notes: Cinnamon, Cardamom, Ginger",
         popularity: 1,
         type: "tea",
-        longDescription: "Original chai with black tea and warming herbs. Contains a blend of five organic fair-trade herbs from small, self-employed farmers from around the world. Each ingredient is known to help add spice to life. Cinnamon and ginger are warming herbs. Cardamom is deliciously aromatic.",
+        longDescription: "Original chai with black tea and warming herbs. Contains a blend of five organic fair-trade herbs from small, self-employed farmers from around the world. Each ingredient is known to be healthy. Cinnamon and ginger are warming herbs. Cardamom is deliciously aromatic.",
    },
    {
         id: 14,
@@ -357,7 +356,7 @@ let products = [
         price: 70,
         img_path: "Images/Teas/14.png",
         description: "Tasting notes: Vegetal, Bitterness, Nuttiness",
-        longDescription: "This Matcha tea is of good quality, which is perfect to be enjoyed clean, cooked in a Matcha bowl. The dried leaves are ground to a very fine powder that impresses with a soft and round feeling in the mouth. The tea has a pretty lovely umami and sweetness. What makes this Matcha is easy to drink. It does not have the taste of grass and has less and bitter taste than other Matcha. ",
+        longDescription: "This Matcha tea is of good quality and  is perfect to be enjoyed cooked in a Matcha bowl. The dried leaves are ground to a very fine powder that impresses with a soft and round feeling in the mouth. The tea has a pretty lovely umami and sweetness. What makes this Matcha easy to drink, is that it does not have the taste of grass and has a less bitter taste than other Matchas. ",
         popularity: 1,
         type: "tea",
    },
@@ -400,7 +399,7 @@ let products = [
        description: "Tasting notes: Flora, Lemon Drop, Honey",
        popularity: 2,
        type: "coffee",
-       longDescription: "This Ethiopian coffee is very special. The strong floral notes make it a quirk that is great to try. It is a cup that can admire guests and it fits super well, as filter coffee. You must buy this coffee if you want to try something special and fun, as well as want to see the coffee disappear quickly, for this Ethiopian coffee, it is hard not to want to brew again and again.",
+       longDescription: "This Ethiopian coffee is very special. The strong floral notes make it a quirk that is great to try. It is a cup that can impress guests and it fits super well as filter coffee. You must buy this coffee if you want to try something special and fun, as well as want to see the coffee disappear quickly, because this Ethiopian coffee is hard not to brew again and again.",
    },
    {
        id: 7,
@@ -420,7 +419,7 @@ let products = [
        description: "Tasting notes: Milk chocolate, Dried fruit",
        popularity: 4,
        type: "coffee",
-       longDescription: "This coffee is characterized by being round and full-bodied with a good body. It has taste notes of almond, dried fruit and aftertaste of milk chocolate. This coffee is grown 1000-1200 meters above sea level and the processing method is natural, which gives body and a sweet character.",
+       longDescription: "This coffee is characterized by being round and full-bodied. It has taste notes of almond, dried fruit and a aftertaste of milk chocolate. This coffee is grown 1000-1200 meters above sea level and the processing method is natural, which gives body and a sweet character.",
    },
    {
     id: 20,
@@ -483,7 +482,7 @@ let products = [
         description: "Tasting notes: Ginger, Chili, Peppermint",
         popularity: 4,
         type: "tea",
-        longDescription: "If you like licorice, but would like a little more kick to the taste of peppermint, chili and ginger, then you should try our ginger tea. We developed it because more customers demanded a slightly stronger herbal tea with chili. And the demand shows that with this ginger tea we have hit what the customers want.",
+        longDescription: "If you like licorice, but would like a little more kick then this taste of peppermint, chili and ginger, is just for you. We developed it because more customers demanded a slightly stronger herbal tea with chili. And the demand shows that with this ginger tea we have hit what the customers want.",
    },
    {
         id: 16,

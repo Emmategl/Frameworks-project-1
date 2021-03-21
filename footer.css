@@ -6,15 +6,19 @@
   }
   .navigation {
     flex: 1;
+    padding-right: 3%;
   }
   .information {
     flex: 1;
+    padding-right: 3%;
   }
   .contact {
     flex: 1;
+    padding-right: 3%;
   }
   .social {
     flex: 1;
+    padding-right: 3%;
   }
 
   a {

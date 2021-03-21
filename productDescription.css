@@ -2,7 +2,7 @@
 .product {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5%;
+    margin-bottom: 350px;
 }
 
 .product-img {

@@ -4,7 +4,9 @@
 }
 
 .row{
-    background-color: rgb(224, 230, 221);
+    /* background-color: rgb(224, 230, 221); */
+    background-color: #F4F3EF;
+    
 }
 .product{
     display:flex;
@@ -62,12 +64,11 @@
     margin-bottom: 6%;
     margin-right: 2%;
     border-radius: 0.6em;
-    color: #234331;
     font-size: 20px;
     padding: 1% 1%;
+    margin-bottom: 430px;
 }
 
-.checkout:hover{
-    box-shadow: 0 0 40px 40px #A2AE79 inset;
-}
+
+
 
